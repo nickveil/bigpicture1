@@ -19,3 +19,8 @@ gulp.task('sassify', function(){
 
 });
 
+gulp.task('watch', function(){
+	gulp.watch('/app/scss/**/*.scss',['sassify'])
+	});
+
+
