@@ -36,13 +36,13 @@ gulp.task('browserSync', function(){
 	browserSync.init({
 		server:{
 			baseDir: 'app'
-		},
+		}
 	});
 });
 
 gulp.task('watch', ['browserSync','sassify'] ,function(){
-	gulp.watch('/app/scss/**/*.scss',['sassify'])
-	gulp.watch('/app/**/*.html',['htmlify'])
+	gulp.watch('app/scss/**/*.scss',['sassify'])
+	gulp.watch('app/**/*.html',['htmlify'])
 	});
 
 
