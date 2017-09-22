@@ -1,0 +1,14 @@
+$bg-color:#f0f5f9;
+$text-font: 'Roboto' , sans-serif;
+$headline-font: 'Roboto' , sans-serif;
+
+
+body {
+	background-color:$bg-color;
+	font-family:$text-font;
+
+}
+
+h1,h2,h3{
+	font-family:$headline-font;
+}
