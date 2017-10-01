@@ -18,134 +18,126 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Bangers|Rye" rel="stylesheet">
-
- 
-
- 
-
 </head>
-<body>
-	<div class="container">
-		<div>
+
+<body class="container">
+	<div class="sections">
 			<h1 class>HangMan</h1>
-		</div>
 
-		<div class="row">
-			<div class="panel panel-default">
-			  <div class="panel-heading">
-			    <h3 class="panel-title">Letters Available</h3>
-			  </div>
-			  <div class="panel-body">
-			    <div class="row">
-			    	<div class="letters">
-						<div class="col-xs-2 letter img-rounded">A</div>
+			<div class="row letters">
+				<div class="panel panel-default letters">
 
-						<div class="col-xs-2 letter img-rounded">B</div>
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Letters Available</h3>
+				  </div>
 
-						<div class="col-xs-2 letter img-rounded">C</div>
+				  <div class="panel-body">
 
-						<div class="col-xs-2 letter img-rounded">D</div>
+				    <div class="row">
+				    	<div class="letters col-xs-2">
+							<div class="col-xs-2 letter img-rounded container">A</div>
 
-						<div class="col-xs-2 letter img-rounded">E</div>
+							<div class="col-xs-2 letter img-rounded container">B</div>
 
-						<div class="col-xs-2 letter img-rounded">F</div>
+							<div class="col-xs-2 letter img-rounded container">C</div>
 
-						<div class="col-xs-2 letter img-rounded">G</div>
+							<div class="col-xs-2 letter img-rounded container">D</div>
 
-						<div class="col-xs-2 letter img-rounded">H</div>
-						
-						<div class="col-xs-2 letter img-rounded">I</div>
+							<div class="col-xs-2 letter img-rounded container">E</div>
 
-						<div class="col-xs-2 letter img-rounded">J</div>
+							<div class="col-xs-2 letter img-rounded container">F</div>
 
-						<div class="col-xs-2 letter img-rounded">K</div>
+							<div class="col-xs-2 letter img-rounded container">G</div>
 
-						<div class="col-xs-2 letter img-rounded">L</div>		
+							<div class="col-xs-2 letter img-rounded container">H</div>
+							
+							<div class="col-xs-2 letter img-rounded container">I</div>
 
-						<div class="col-xs-2 letter img-rounded">M</div>
+							<div class="col-xs-2 letter img-rounded container">J</div>
 
-						<div class="col-xs-2 letter img-rounded">N</div>
+							<div class="col-xs-2 letter img-rounded container">K</div>
 
-						<div class="col-xs-2 letter img-rounded">O</div>
+							<div class="col-xs-2 letter img-rounded container">L</div>		
 
-						<div class="col-xs-2 letter img-rounded">P</div>
-
-						<div class="col-xs-2 letter img-rounded">Q</div>
-
-						<div class="col-xs-2 letter img-rounded">R</div>
-
-						<div class="col-xs-2 letter img-rounded">S</div>
-
-						<div class="col-xs-2 letter img-rounded">T</div>
-						
-						<div class="col-xs-2 letter img-rounded">U</div>
-
-						<div class="col-xs-2 letter img-rounded">V</div>
-
-						<div class="col-xs-2 letter img-rounded">W</div>
-
-						<div class="col-xs-2 letter img-rounded">X</div>	
-
-						<div class="col-xs-2 letter img-rounded">Y</div>
-
-						<div class="col-xs-2 letter img-rounded">Z</div>	
+							<div class="col-xs-2 letter img-rounded container">M</div>
+						</div>
 					</div>
 
+
+
+					<div class="row"> 
+						<div class="letters col-xs-2">
+
+							<div class="col-xs-2 letter img-rounded container">N</div>
+
+							<div class="col-xs-2 letter img-rounded container">O</div>
+
+							<div class="col-xs-2 letter img-rounded container">P</div>
+
+							<div class="col-xs-2 letter img-rounded container">Q</div>
+
+							<div class="col-xs-2 letter img-rounded container">R</div>
+
+							<div class="col-xs-2 letter img-rounded container">S</div>
+
+							<div class="col-xs-2 letter img-rounded container">T</div>
+							
+							<div class="col-xs-2 letter img-rounded container">U</div>
+
+							<div class="col-xs-2 letter img-rounded container">V</div>
+
+							<div class="col-xs-2 letter img-rounded container">W</div>
+
+							<div class="col-xs-2 letter img-rounded container">X</div>	
+
+							<div class="col-xs-2 letter img-rounded container">Y</div>
+
+							<div class="col-xs-2 letter img-rounded container">Z</div>	
+						</div>
+					</div>
 			</div>
-			  </div>
+
+
+
+			<div class="row image">
+				<div class="row ">
+					<img src="/images/Start.jpg" width="400" height="250" alt="Start jpg" class="img-rounded" id="stateImage">
+				</div><br>
 			</div>
-
-			<div class="row ">
-				<img src="/images/Start.jpg" width="400" height="250" alt="Start jpg" class="img-rounded">
-			</div><br>
-		</div>
-
-		<div class="guess container">
-			<div class="row guess">
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>
-
-				<div class="col-xs-2 space img-rounded">_</div>		
-			</div>
-		</div>
-
-
-
-
-
-		</div>
-
-
-	
-
-	
 		
 
-		</div>
+			<div class="guess container">
+				<div class="row guess">
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>
+
+					<div class="col-xs-2 space img-rounded">_</div>		
+				</div>
+			</div>
+
 	</div>
 
 
 
-
 	
 
 
@@ -155,7 +147,7 @@
 
 
 
-
-<!-- <script src="main.js"></script> -->
+<script src="words.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

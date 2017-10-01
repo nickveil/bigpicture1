@@ -35,6 +35,14 @@ gulp.task('htmlify', function(){
 	}));
 });
 
+gulp.task('javafy', function(){
+  	return gulp.src('app/**/*.js')
+		.pipe(gulp.dest('dist'))
+		.pipe(browserSync.reload({
+			stream: true
+	}));
+});
+
 
 gulp.task('browserSync', function(){
 	browserSync.init({
@@ -47,6 +55,7 @@ gulp.task('browserSync', function(){
 gulp.task('watch', ['sassify','browserSync'] ,function(){
 	gulp.watch('app/scss/**/*.scss',['sassify'])
 	gulp.watch('app/**/*.html',['htmlify'])
+	gulp.watch('app/**/*.js',['javafy'])
 	});
 
 

@@ -4,8 +4,13 @@
   margin-top: .5%;
   background-image: url(http://cdn24.printing-cdn.com/wp-content/uploads/2-Wanted-Poster.jpg); }
 
+.row {
+  text-align: center;
+  display: inline-block; }
+
 .col-xs-2 {
-  border: Solid 1px #000; }
+  border: Solid 1px #000;
+  margin: auto; }
 
 .space {
   height: 50px;
@@ -27,7 +32,9 @@
   width: 100%;
   padding: 7px;
   margin: auto;
-  border: rounded; }
+  border: rounded;
+  display: inline-block;
+  background-color: brown; }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Rye', cursive;
@@ -50,6 +57,9 @@ h1 {
 
 p {
   font-family: 'Bangers', cursive; }
+
+#panel-heading {
+  background-color: brown; }
 
 #panel-body {
   background-color: #ccc; }

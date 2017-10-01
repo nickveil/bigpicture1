@@ -1,0 +1,28 @@
+var words = [
+	'wanting',
+	'winter',
+	'grubby',
+	'shake',
+	'alert',
+	'control',
+	'nutritious',
+	'spiky',
+	'jolly',
+	'wry',
+	'drown',
+	'deer',
+	'load',
+	'circle',
+	'account',
+	'carve',
+	'plastic',
+	'mom',
+	'settle',
+	'airplane',
+	'feeble',
+	'wool',
+	'dare',
+	'trust',
+	'stupid'
+
+];
