@@ -1,6 +1,10 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+// var input=
+
+//var sassSrc = 'app/scss/**/*.scss'
+//var htmlSrc = 'app/**/*.html'
 
 
 gulp.task('default', function() {
@@ -24,23 +28,23 @@ gulp.task('sassify', function(){
 });
 
 gulp.task('htmlify', function(){
-	return gulp.src('app/**/*.html')
-	.pipe(gulp.dest('dist'))
-	.pipe(browserSync.reload({
-		stream: true
+  	return gulp.src('app/**/*.html')
+		.pipe(gulp.dest('dist'))
+		.pipe(browserSync.reload({
+			stream: true
 	}));
 });
 
 
 gulp.task('browserSync', function(){
 	browserSync.init({
-		server:{
-			baseDir: 'app'
+		server: {
+			baseDir: 'dist'
 		}
 	});
 });
 
-gulp.task('watch', ['browserSync','sassify'] ,function(){
+gulp.task('watch', ['sassify','browserSync'] ,function(){
 	gulp.watch('app/scss/**/*.scss',['sassify'])
 	gulp.watch('app/**/*.html',['htmlify'])
 	});

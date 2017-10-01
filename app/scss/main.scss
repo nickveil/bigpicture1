@@ -1,15 +1,80 @@
-$bg-color:#000;
-$text-font: 'Roboto' , sans-serif;
-$headline-font: 'Roboto' , sans-serif;
+   .container{
+    border: solid 1px #ddd;
+   	text-align: center;
+   	margin-top: .5%;
+   	background-image: url(http://cdn24.printing-cdn.com/wp-content/uploads/2-Wanted-Poster.jpg);
 
+   }
 
-body {
-	background-color:$bg-color;
-	font-family:$text-font;
+	.col-xs-2{
+		border: Solid 1px #000;
 
+	}
 
-}
+	.space{  
+		height: 50px;
+		width: 50px;
+		font-size: 25px;
+		padding: 7px;
+		margin: 5px;
+		border:rounded;
+	}
 
-h1,h2,h3{
-	font-family:$headline-font;
-}
+	.letter{  
+		height: 50px;
+		width: 50px;
+		font-size: 25px;
+		padding: 7px;
+		margin: 5px;
+		border:rounded;
+
+	}
+
+	.letters{  
+		width: 100%;
+		padding: 7px;
+		margin: auto;
+		border:rounded;
+	}	
+
+   h1,h2,h3,h4,h5{
+   	font-family: 'Rye', cursive;
+   	padding: 5px;
+
+   }
+
+   .guess{
+   	height: auto;
+   	width:auto;
+   	margin-left: 5%;
+   	margin-right: 5%;
+
+   }
+
+  img{
+  	height: auto;
+  	width: auto;
+  	max-height: 400px;
+  	max-width: 250px;
+  }
+
+   h1{
+   	font-size: 68px;
+   }
+	p{
+
+	font-family: 'Bangers', cursive;
+
+	}
+
+	#panel-body{
+		background-color: #ccc;
+
+	}
+
+	#row {
+		display: inline-block;
+		margin: auto;
+		width: 100%;
+	}
+
