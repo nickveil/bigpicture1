@@ -1,7 +1,7 @@
 //Globals
 var letters = document.getElementsByClassName('letter');
 var guesses = 0;
-
+var word='';
 
 
 
@@ -15,6 +15,35 @@ document.onreadystatechange = function() {
 	} 
 };
 
+
+	function evaluateGuess(){  
+
+		//console.log(selection);
+		var selection = this.innerHTML;
+		this.removeEventListener("click",evaluateGuess);
+		console.log(selection);
+
+		
+			if(word.includes(selection)){
+				for (var i=0;i<word.length; i++){
+					if(selection==word[i]){
+						document.getElementById("space" + i).innerHTML= word[i];
+						}
+					}
+
+			}else{
+				guesses++;
+				imageChange(guesses);
+				
+			}
+
+	
+		console.log(guesses);
+
+
+
+	}
+
 function startGame(){
 
 	console.log('In funtion startGame()');
@@ -24,13 +53,13 @@ function startGame(){
 
 		//load the secret word and add click event on letters
 		loadSecretWord();
+
 		
 		// evaluate letter selection
-		for(var i=0; i<letters.length;i++){  					  	// It stopped working when I added the event listener and evaluate guess function. 
-											 						// I receive this notice when I inspect the console.log on chrome.
-			letters[i].addEventListener("click", evaluateGuess);  	// main.js:30 Uncaught ReferenceError: evaluateGuess is not defined
-    																//at startGame (main.js:30)
-    																//at HTMLDocument.document.onreadystatechange (main.js:13)
+		for(var i=0; i<letters.length;i++){  					  	
+											 						
+			letters[i].addEventListener("click", evaluateGuess);  	
+    																
 		} 
 
 
@@ -67,11 +96,9 @@ function imageChange(num){
 }
 
 function loadSecretWord(){
-	
-
 	//generate
 	var wordNum=Math.floor((Math.random() * 25)+1);
-	console.log(wordNum);
+	//console.log(wordNum);
 	var secretWord=words[wordNum].toUpperCase();
 	console.log(secretWord);
 
@@ -86,35 +113,20 @@ function loadSecretWord(){
 	 	var div = document.createElement("div");
 	 	div.id = "space" + i;
 	 	div.className=" col-xs-2 space img-rounded";
-	 	console.log(div);
+	 	//console.log(div);
 	 	//var x = document.createTextNode(secretWord[i]);
 	 	var x = document.createTextNode(" _ ");
-	 	console.log(x);
+	 	//console.log(x);
 	 	div.appendChild(x);
 	 	// var y=div.appendChild(x);
 	 	// y.className += "col-xs-2 space img-rounded" ;
-	 	console.log(div.appendChild(x));
+	 	//console.log(div.appendChild(x));
 	 	document.getElementById("guess").appendChild(div);
 	 	document.getElementById("space" + i).style.display='block'; 
 
-
 	 	// document.getElementById("space"+i)=secretWord[i];
-
 	 }
-
-	function evaluateGuess(){  // It stopped working when I added the event listener and evaluate guess function
-
-		console.log('hello');
-		// var selection = this.innerHTML;
-		// this.removeEventListener("click",evaluateGuess);
-
-
-
-	}
-
-	
-
-
-}
-
+	 word=secretWord;
+	 return word;
+	 }	 
 
